@@ -1,18 +1,27 @@
 import joi, { Schema } from "joi";
 
+const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/[0-9]{4}$/;
+
 export const userSchema: Schema = joi.object({
     name: joi.string().required(),
     cpf: joi.string().custom(validateCpf).required(),
-    dateOfBirth: joi.string().required().pattern(/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/[0-9]{4}$/).required()
+    dateOfBirth: joi.string().required().pattern(dateRegex).required()
+});
+
+export const userDataSchema: Schema = joi.object({
+    id: joi.number().integer().required(),
+    name: joi.string().required(),
+    cpf: joi.string().custom(validateCpf).required(),
+    dateOfBirth: joi.date().required()
 });
 
 export const cpfSchema: Schema = joi.object({
-    cpf: joi.string().custom(validateCpf),
+    cpf: joi.string().custom(validateCpf).required(),
 });
 
 export const pageSchema: Schema = joi.object({
-    pageNumber: joi.number().greater(0),
-    pageSize: joi.number().greater(0)
+    pageNumber: joi.number().greater(0).required(),
+    pageSize: joi.number().greater(0).required()
 });
 
 function validateCpf(value: string) {
