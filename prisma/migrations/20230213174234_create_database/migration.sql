@@ -1,12 +1,12 @@
 -- CreateTable
-CREATE TABLE "profiles" (
+CREATE TABLE "users" (
     "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
     "cpf" TEXT NOT NULL,
     "dateOfBirth" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "profiles_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "users_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "profiles_cpf_key" ON "profiles"("cpf");
+CREATE UNIQUE INDEX "users_cpf_key" ON "users"("cpf");

@@ -2,7 +2,6 @@ import { Users } from "@prisma/client";
 
 import logger from "../logger.js";
 import prisma from "../database.js";
-import { User } from "../models/user.js";
 import { UserData } from "../services/usersService.js";
 
 export class UsersRepository {

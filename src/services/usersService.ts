@@ -20,8 +20,12 @@ export class UsersService {
         const existinguser: Users = await repository.getByCpf(user.cpf);
         if(existinguser) throw { type: "error_conflict", message: "User already exists." };
 
+        // change date format to mm/dd/aaaa
+        const dateParts = user.dateOfBirth.split("/");
+        const dateStr = dateParts[1] + "/" + dateParts[0] + "/" + dateParts[2];
+
         // fix user type to insert in database
-        const date = new Date(user.dateOfBirth);
+        const date = new Date(dateStr);
         const userData: UserData = {
             name: user.name,
             cpf: user.cpf,
