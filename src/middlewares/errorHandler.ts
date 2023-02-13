@@ -1,7 +1,8 @@
 import { Request, Response, NextFunction } from "express";
+import logger from "../logger.js";
 
 export default function errorHandler(error: any, req: Request, res: Response, next: NextFunction) {
-    console.error(error);
+    logger.error(error.message);
 
     if (error.type === "error_not_found") {
         return res.status(404).send(error.message);
