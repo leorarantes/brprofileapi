@@ -1,4 +1,4 @@
-# BRUserAPI
+# BRUserAPI <img src="./flag.svg" style="height:31px">
 
 
 Backend for BRUserAPI, an API that registers and returns Brazilian users.
@@ -25,22 +25,32 @@ BRUserAPI is an API that registers and returns Brazilian users by allowing clien
 
 ### Without Docker:
 
-1. Clone this repository.
+1. Initiate a PostgreSQL server.
+2. Clone this repository.
 3. Install all dependencies.
 
 ```bash
 npm install
 ```
 
-3. Populate `.env.dev` file based on `.env.dev.example`.
-4. Build the application.
+4. Populate `.env.dev` file based on `.env.dev.example`.
+5. Apply database migrations.
+
+```bash
+dotenv -e .env.dev npx prisma migrate dev
+```
+
+6. Build the application.
 
 ```bash
 npm run build
 ```
 
-5. Initiate a PostgreSQL server.
-6. Run the application.
+7. Run the application.
+
+```bash
+npm start
+```
 
 ### With Docker:
 
@@ -54,17 +64,17 @@ docker-compose up
 
 ## 🧪 Testing
 
-### Manual tests:
+### ✋ Manual tests:
 
 1. Run the application.
 
 ```bash
-npm start
+npm run dev
 ```
 
 2. Use `bruserapiCollection` to test the application endpoints with ThunderClient.
 
-### Automated tests:
+### 🤖 Automated tests:
 
 1. Populate `.env.test` file based on `.env.test.example`.
 2. Type this command to run the tests:
