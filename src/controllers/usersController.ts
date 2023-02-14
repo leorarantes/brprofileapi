@@ -22,7 +22,7 @@ export class UsersController {
         logger.info(`Retrieving users with pagination rules...`);
         const users: Users[] = await service.get(pageNumber, pageSize);
         logger.info("Users sucessfully retrieved.");
-        res.status(200).send(users)
+        res.status(200).send(users);
     }
 
     async getByCpf(req: Request, res: Response) {

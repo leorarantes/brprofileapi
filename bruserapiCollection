@@ -1,0 +1,164 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "bruserapiCollection",
+    "dateExported": "2023-02-13T23:58:12.723Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "e5a07da1-b808-456a-9340-02caf93a0f33",
+            "name": "POST /users",
+            "containerId": "",
+            "created": "2023-02-13T23:45:48.184Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "d89386db-1bc7-4319-a600-3ebb4ff79a7f",
+            "name": "GET /users",
+            "containerId": "",
+            "created": "2023-02-13T23:49:27.241Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "29e415d4-780e-4b98-8e98-2100ad1a3733",
+            "name": "GET /users/cpf",
+            "containerId": "",
+            "created": "2023-02-13T23:52:08.652Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d8031c2e-675b-48e8-af8d-b39b5d57f4b6",
+            "colId": "c5f426eb-8f50-4901-9909-130a1a4c471d",
+            "containerId": "e5a07da1-b808-456a-9340-02caf93a0f33",
+            "name": "HTTP 201/409",
+            "url": "http://localhost:5000/users",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-02-13T23:41:03.140Z",
+            "modified": "2023-02-13T23:47:41.251Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Teste\",\n  \"cpf\": \"11144477735\",\n  \"dateOfBirth\": \"01/01/2000\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4f306bcc-154d-445b-b09b-a82927b66669",
+            "colId": "c5f426eb-8f50-4901-9909-130a1a4c471d",
+            "containerId": "e5a07da1-b808-456a-9340-02caf93a0f33",
+            "name": "HTTP 422",
+            "url": "http://localhost:5000/users",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-02-13T23:47:31.081Z",
+            "modified": "2023-02-13T23:51:37.402Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Teste\",\n  \"cpf\": \"valor inválido\",\n  \"dateOfBirth\": \"01/01/2000\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8c2fed11-93ff-460b-b17c-c63f8c45da4d",
+            "colId": "c5f426eb-8f50-4901-9909-130a1a4c471d",
+            "containerId": "d89386db-1bc7-4319-a600-3ebb4ff79a7f",
+            "name": "HTTP 200",
+            "url": "http://localhost:5000/users",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-02-13T23:49:41.385Z",
+            "modified": "2023-02-13T23:50:29.126Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pageNumber\": 1,\n  \"pageSize\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e41a384b-5c3a-4f01-b316-f1ec40c50b53",
+            "colId": "c5f426eb-8f50-4901-9909-130a1a4c471d",
+            "containerId": "d89386db-1bc7-4319-a600-3ebb4ff79a7f",
+            "name": "HTTP 422",
+            "url": "http://localhost:5000/users",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-02-13T23:50:42.103Z",
+            "modified": "2023-02-13T23:51:20.453Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pageNumber\": \"valor inválido\",\n  \"pageSize\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bfb559d1-791e-4ed5-8c0f-e454090ccebc",
+            "colId": "c5f426eb-8f50-4901-9909-130a1a4c471d",
+            "containerId": "29e415d4-780e-4b98-8e98-2100ad1a3733",
+            "name": "HTTP 200",
+            "url": "http://localhost:5000/users/cpf",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-02-13T23:52:28.186Z",
+            "modified": "2023-02-13T23:53:36.308Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"cpf\": \"11144477735\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c01520a2-db78-45d6-ab70-cca20e84a720",
+            "colId": "c5f426eb-8f50-4901-9909-130a1a4c471d",
+            "containerId": "29e415d4-780e-4b98-8e98-2100ad1a3733",
+            "name": "HTTP 404",
+            "url": "http://localhost:5000/users/cpf",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-02-13T23:53:52.037Z",
+            "modified": "2023-02-13T23:54:30.818Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"cpf\": \"26647945075\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3370c93e-921d-4b49-a971-da037abe9d14",
+            "colId": "c5f426eb-8f50-4901-9909-130a1a4c471d",
+            "containerId": "29e415d4-780e-4b98-8e98-2100ad1a3733",
+            "name": "HTTP 422",
+            "url": "http://localhost:5000/users/cpf",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-02-13T23:54:41.709Z",
+            "modified": "2023-02-13T23:55:00.180Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"cpf\": \"valor inválido\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
