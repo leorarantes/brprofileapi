@@ -1,4 +1,4 @@
-# BRUserAPI 📋
+# 📋 Docs | BRUserAPI
 
 ## Description
 
