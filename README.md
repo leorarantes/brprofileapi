@@ -1,4 +1,4 @@
-# BRUserAPI <img src="./flag.svg" style="height:31px">
+# BRUserAPI <img src="./assets/flag.svg" style="height:31px">
 
 
 Backend for BRUserAPI, an API that registers and returns Brazilian users.
