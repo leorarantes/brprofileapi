@@ -70,7 +70,7 @@ This endpoint is used to retrieve an array of users using pagination.
     
 This endpoint is used to retrieve users by CPF.
 
-### Request body format:
+### Request body format (example):
 
 ```javascript
 {
@@ -78,7 +78,7 @@ This endpoint is used to retrieve users by CPF.
 }
 ```
     
-### Response body format:
+### Response body format (example):
 
 ```json
 [
