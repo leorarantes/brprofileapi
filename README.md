@@ -37,7 +37,7 @@ npm install
 5. Apply database migrations.
 
 ```bash
-dotenv -e .env.dev npx prisma migrate dev
+export DATABASE_URL=${DATABASE_URL} && export PORT=${PORT} && npx prisma migrate dev
 ```
 
 6. Build the application.
