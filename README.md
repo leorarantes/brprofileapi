@@ -9,7 +9,6 @@ BRUserAPI is an API that registers and returns Brazilian users by allowing clien
 
 ## 💻 Technologies and Concepts
 
-### Back-end
 - REST APIs
 - Object-oriented programming
 - Node.js
